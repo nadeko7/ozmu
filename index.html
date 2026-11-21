@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Découvrez SNACK ÖZMU à Anderlecht. Consultez la carte et retrouvez les informations du snack.">
 <title>SNACK ÖZMU — Anderlecht</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=menu">
 <script src="contenu.js" defer></script>
-<script src="site.js" defer></script>
+<script src="site.js?v=menu" defer></script>
 </head>
 <body>
  <div class="site-intro" aria-hidden="true"><img src="logo_465x320.png" alt="" width="465" height="320"></div>
@@ -15,10 +15,10 @@
 <header class="top">
  <a class="brand" href="#accueil"><img src="logo_465x320.png" alt="" width="465" height="320"><span><small>SNACK</small> ÖZMU<span class="dot">.</span></span></a>
  <nav aria-label="Navigation principale">
- <a href="#menu">La carte</a><a href="#a-propos">À propos</a><a href="#localisation">Nous trouver</a><a href="#contact">Contact</a>
+ <a href="#menu">Notre menu</a><a href="#a-propos">À propos</a><a href="#localisation">Nous trouver</a><a href="#contact">Contact</a>
  </nav>
  <details class="mobile-nav"><summary>Navigation</summary><nav aria-label="Navigation mobile">
- <a href="#menu">La carte</a><a href="#a-propos">À propos</a><a href="#localisation">Nous trouver</a><a href="#contact">Contact</a>
+ <a href="#menu">Notre menu</a><a href="#a-propos">À propos</a><a href="#localisation">Nous trouver</a><a href="#contact">Contact</a>
  </nav></details>
  <a class="button top-order" href="commander.html">Commander</a>
 </header>
@@ -31,10 +31,18 @@
   <figure class="hero-image"><img src="images/accueil-burger.jpg" alt="" fetchpriority="high"><figcaption>Photo d’illustration</figcaption></figure>
  </section>
  <section id="menu" class="section wrap" aria-labelledby="menu-title">
-  <h2 id="menu-title">Notre menu</h2>
-  <p>Prix affichés sur Uber Eats. Sélectionnez un article pour voir les options de commande.</p>
-  <div id="filtres" class="filters" role="group" aria-label="Catégories du menu"></div>
-  <div id="plats" class="cards"></div><p id="menu-status" role="status">La carte sera bientôt disponible.</p>
+  <details id="menu-volet" class="menu-disclosure">
+   <summary>
+    <h2 id="menu-title">Notre menu</h2>
+    <span>Voir les catégories et leurs articles</span>
+   </summary>
+   <div class="menu-content">
+    <div id="filtres" class="filters" role="group" aria-label="Catégories du menu"></div>
+    <h3 id="categorie-active"></h3>
+    <p>Prix affichés sur Uber Eats. Sélectionnez un article pour voir les options de commande.</p>
+    <div id="plats" class="cards"></div><p id="menu-status" role="status">La carte sera bientôt disponible.</p>
+   </div>
+  </details>
  </section>
  <section id="a-propos" class="section wrap about">
   <h2>À propos</h2><p class="info-panel about-copy">SNACK ÖZMU, votre snack à Anderlecht. Une adresse pour une pause gourmande, du burger au tacos, sur le pouce ou entre amis.</p>

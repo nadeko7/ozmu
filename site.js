@@ -48,6 +48,7 @@ function fiche(produit) {
 }
 
 function filtrer(categorie) {
+  get("categorie-active").textContent = categorie;
   const resultats = produits.filter((p) => p.categorie === categorie);
   get("plats").replaceChildren(...resultats.map(fiche));
   get("menu-status").textContent = resultats.length
@@ -66,6 +67,16 @@ for (const categorie of contenu.categories) {
   get("filtres").append(bouton);
 }
 filtrer(contenu.categories[0] || "");
+
+const voletMenu = get("menu-volet");
+function ouvrirMenuDepuisAncre() {
+  if (location.hash === "#menu") voletMenu.open = true;
+}
+ouvrirMenuDepuisAncre();
+window.addEventListener("hashchange", ouvrirMenuDepuisAncre);
+document.querySelectorAll('a[href="#menu"]').forEach((lienMenu) => {
+  lienMenu.addEventListener("click", () => { voletMenu.open = true; });
+});
 
 function lien(id, url) {
   if (!url) return;

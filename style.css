@@ -87,3 +87,14 @@ dt{font-weight:700}dd{margin:0 0 .5rem}
 }
 @keyframes intro-logo{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
 @keyframes intro-fade{0%,48%{opacity:1;visibility:visible}100%{opacity:0;visibility:hidden}}
+
+.menu-disclosure{border:1px solid #ffffff38;border-radius:var(--radius-large);background:#15090be6}
+.menu-disclosure>summary{position:relative;display:grid;gap:.4rem;padding:clamp(1.25rem,4vw,3rem);padding-inline-end:clamp(3.6rem,8vw,6rem);border-radius:var(--radius-large);cursor:pointer;list-style:none}
+.menu-disclosure>summary::-webkit-details-marker{display:none}
+.menu-disclosure>summary:hover{background:#ffffff10}
+.menu-disclosure>summary h2{margin:0;text-wrap:pretty}
+.menu-disclosure>summary::after{content:"";position:absolute;inset-inline-end:clamp(1.5rem,4vw,3rem);top:50%;width:.75rem;height:.75rem;border-right:2px solid var(--red-light);border-bottom:2px solid var(--red-light);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+.menu-disclosure[open]>summary::after{transform:translateY(-25%) rotate(225deg)}
+.menu-content{padding:0 clamp(1.25rem,4vw,3rem) clamp(1.25rem,4vw,3rem)}
+.menu-content h3{margin-top:1.5rem}
+.menu-content h3+p{margin-top:.35rem}
