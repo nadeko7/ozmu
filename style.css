@@ -81,12 +81,12 @@ dt{font-weight:700}dd{margin:0 0 .5rem}
 
 .site-intro{display:none}
 @media(prefers-reduced-motion:no-preference){
- .site-intro{position:fixed;inset:0;z-index:8;display:grid;place-items:center;background:#100607;pointer-events:none;animation:intro-fade 1.25s ease both}
+ .site-intro{position:fixed;inset:0;z-index:8;display:grid;place-items:center;background:#100607;pointer-events:none;animation:intro-fade 2.25s ease both}
  .site-intro img{width:clamp(8rem,27vw,14rem);height:auto;padding:1.05rem;border-radius:var(--radius);background:var(--white);animation:intro-logo .5s ease-out both}
  body:has(:focus-visible) .site-intro{display:none}
 }
 @keyframes intro-logo{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
-@keyframes intro-fade{0%,48%{opacity:1;visibility:visible}100%{opacity:0;visibility:hidden}}
+@keyframes intro-fade{0%,71%{opacity:1;visibility:visible}100%{opacity:0;visibility:hidden}}
 
 .menu-disclosure{border:1px solid #ffffff38;border-radius:var(--radius-large);background:#15090be6}
 .menu-disclosure>summary{position:relative;display:grid;gap:.4rem;padding:clamp(1.25rem,4vw,3rem);padding-inline-end:clamp(3.6rem,8vw,6rem);border-radius:var(--radius-large);cursor:pointer;list-style:none}
