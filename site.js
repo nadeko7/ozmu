@@ -122,6 +122,6 @@ if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: re
       entree.target.classList.add("enter");
       observer.unobserve(entree.target);
     }
-  }, { threshold: .1 });
+  }, { rootMargin: "0px 0px -24px 0px" });
   document.querySelectorAll("main .section").forEach((section) => observer.observe(section));
 }
