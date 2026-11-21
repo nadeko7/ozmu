@@ -1,0 +1,63 @@
+﻿<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Découvrez SNACK ÖZMU à Anderlecht. Consultez la carte et retrouvez les informations du snack.">
+<title>SNACK ÖZMU — Anderlecht</title>
+<link rel="stylesheet" href="style.css">
+<script src="contenu.js" defer></script>
+<script src="site.js" defer></script>
+</head>
+<body>
+ <div class="site-intro" aria-hidden="true"><img src="logo_465x320.png" alt="" width="465" height="320"></div>
+<a class="skip" href="#principal">Aller au contenu</a>
+<header class="top">
+ <a class="brand" href="#accueil"><img src="logo_465x320.png" alt="" width="465" height="320"><span><small>SNACK</small> ÖZMU<span class="dot">.</span></span></a>
+ <nav aria-label="Navigation principale">
+ <a href="#menu">La carte</a><a href="#a-propos">À propos</a><a href="#localisation">Nous trouver</a><a href="#contact">Contact</a>
+ </nav>
+ <details class="mobile-nav"><summary>Navigation</summary><nav aria-label="Navigation mobile">
+ <a href="#menu">La carte</a><a href="#a-propos">À propos</a><a href="#localisation">Nous trouver</a><a href="#contact">Contact</a>
+ </nav></details>
+ <a class="button top-order" href="commander.html">Commander</a>
+</header>
+<main id="principal">
+ <section class="hero" id="accueil" aria-labelledby="slogan">
+  <div class="hero-copy"><p class="location">Anderlecht · Belgique</p>
+   <h1 id="slogan">À Anderlecht,<br>on a du <em>goût.</em></h1>
+   <div class="actions"><a class="button" href="#menu">Découvrir notre menu</a><a class="button outline" href="commander.html">Commander</a></div>
+  </div>
+  <figure class="hero-image"><img src="images/accueil-burger.jpg" alt="" fetchpriority="high"><figcaption>Photo d’illustration</figcaption></figure>
+ </section>
+ <section id="menu" class="section wrap" aria-labelledby="menu-title">
+  <h2 id="menu-title">Notre menu</h2>
+  <p>Prix affichés sur Uber Eats. Sélectionnez un article pour voir les options de commande.</p>
+  <div id="filtres" class="filters" role="group" aria-label="Catégories du menu"></div>
+  <div id="plats" class="cards"></div><p id="menu-status" role="status">La carte sera bientôt disponible.</p>
+ </section>
+ <section id="a-propos" class="section wrap about">
+  <h2>À propos</h2><p class="info-panel about-copy">SNACK ÖZMU, votre snack à Anderlecht. Une adresse pour une pause gourmande, du burger au tacos, sur le pouce ou entre amis.</p>
+ </section>
+ <section id="localisation" class="section wrap visit">
+  <div><h2>Nous trouver</h2><p><strong>SNACK ÖZMU</strong><br>Anderlecht, Belgique</p><address id="adresse" hidden></address><a class="button" id="itineraire" hidden>Itinéraire</a></div>
+  <div class="info-panel"><h3>Horaires</h3><p id="horaires-status">Horaires à venir.</p><dl id="horaires"></dl></div>
+  <iframe id="carte" title="Carte Google Maps de SNACK ÖZMU" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" hidden></iframe>
+ </section>
+ <section id="contact" class="section dark">
+  <div class="wrap"><h2>Contact</h2><p id="contact-status">Les coordonnées seront bientôt disponibles.</p>
+  <div class="actions"><a class="button" id="telephone" hidden>Contacter le snack</a><a class="button outline" id="instagram" hidden>Instagram</a><a class="button" href="commander.html">Commander</a></div></div>
+ </section>
+</main>
+<footer class="wrap footer"><span>SNACK ÖZMU · Anderlecht</span><a href="#accueil">Retour en haut</a></footer>
+<dialog id="commande-produit" class="order-dialog" aria-labelledby="commande-produit-nom">
+ <form method="dialog"><button class="close-dialog" autofocus>Fermer</button></form>
+ <h2 id="commande-produit-nom"></h2>
+ <p id="commande-produit-prix"></p>
+ <div class="actions">
+  <a class="button" id="commande-uber" href="https://www.ubereats.com/be/store/ozmu-snack/OQm7Y-DIWaSBR3e65a0s0Q">Commander sur Uber Eats</a>
+  <a class="button outline" href="https://www.takeaway.com/be-fr/menu/snack-ozmu-anderlecht?serviceType=delivery">Voir la carte sur Takeaway</a>
+ </div>
+</dialog>
+</body>
+</html>
