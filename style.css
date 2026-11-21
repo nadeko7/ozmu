@@ -98,3 +98,16 @@ dt{font-weight:700}dd{margin:0 0 .5rem}
 .menu-content{padding:0 clamp(1.25rem,4vw,3rem) clamp(1.25rem,4vw,3rem)}
 .menu-content h3{margin-top:1.5rem}
 .menu-content h3+p{margin-top:.35rem}
+
+.restaurant-details{display:grid;grid-template-columns:1.1fr 1fr;gap:1rem}
+.reviews-card{display:grid;align-content:center;justify-items:start}
+.reviews-card h2{font-size:clamp(2rem,5vw,3.5rem);margin-bottom:.5rem}
+.review-score{display:flex;align-items:center;flex-wrap:wrap;gap:.75rem;margin:0 0 1.25rem}
+.review-stars{color:#ffd27e;font-size:1.55rem;letter-spacing:.08em}
+.review-stars span{color:#e9d9d2}
+.restaurant-badges{display:grid;gap:1rem;list-style:none;margin:0;padding:0}
+.restaurant-badges li{display:flex;align-items:center;gap:1rem}
+.halal-mark,.anniversary-medal{display:grid;place-items:center;flex:none;width:2.75rem;aspect-ratio:1;border-radius:50%;font-weight:800}
+.halal-mark{border:1px solid currentColor;color:var(--white)}
+.anniversary-medal{background:#ffd27e;color:#2e1a0a;box-shadow:inset 0 0 0 3px #ffd27e,inset 0 0 0 4px #825018}
+@media(max-width:42rem){.restaurant-details{grid-template-columns:1fr}}
